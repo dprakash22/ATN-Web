@@ -1,0 +1,28 @@
+.left{
+    box-shadow: 0px 0px 5px  gray;
+    width: 17%;
+    height: 735px;
+}
+
+.requestpage{
+    display: flex;
+    flex-direction: row;
+}
+
+.R-logo{
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+.l-title{
+    margin-top: 32px;
+    margin-left: 10px;
+}
+
+.titles{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
