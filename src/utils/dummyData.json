@@ -1,0 +1,248 @@
+{
+	"features": [
+		{
+			"title": "Quality Code",
+			"description": "Code structure that all developers will easily understand and fall in love with."
+		},
+		{
+			"title": "Continuous Updates",
+			"description": "Free updates for the next 12 months, including new demos and features."
+		},
+		{
+			"title": "Stater-Kit",
+			"description": "Start your project quickly without having to remove unnecessary features."
+		},
+		{
+			"title": "API Ready",
+			"description": "Just change the endpoint and see your own data loaded within seconds."
+		},
+		{
+			"title": "Excellent Support",
+			"description": "An easy-to-follow doc with lots of references and code examples."
+		},
+		{
+			"title": "Well Documented",
+			"description": "An easy-to-follow doc with lots of references and code examples."
+		}
+	],
+	"pricing_plan": [
+		{
+			"plan": "Basic",
+			"desc": "A simple start for everyone",
+			"price/m": 0,
+			"points": [
+				"100 responses a month",
+				"Unlimited forms and surveys",
+				"Unlimited fields",
+				"Basic form creation tools",
+				"Up to 2 subdomains"
+			]
+		},
+		{
+			"plan": "Pro",
+			"desc": "For small to medium business",
+			"price/m": 7,
+			"points": [
+				"Up to 5 users",
+				"120+ componentse",
+				"Basic support on Github",
+				"Monthly updates",
+				"Integrations"
+			]
+		},
+		{
+			"plan": "Entreprise",
+			"desc": "Solution for big organizations",
+			"price/m": 16,
+			"points": [
+				"Up to 10 users",
+				"150+ components",
+				"Basic support on Github",
+				"Monthly updates",
+				"Custom permissions"
+			]
+		}
+	],
+	"faq" : [
+		{
+			"title": "Do you charge for each upgrade?",
+			"description": "Lemon drops chocolate cake gummies carrot cake chupa chups muffin topping. Sesame snaps icing marzipan gummi bears macaroon dragée danish caramels powder. Bear claw dragée pastry topping soufflé. Wafer gummi bears marshmallow pastry pie."
+		},
+		{
+			"title": "Do I need to purchase a lisence for each website?",
+			"description": "Dessert ice cream donut oat cake jelly-o pie sugar plum cheesecake. Bear claw dragée oat cake dragée ice cream halvah tootsie roll. Danish cake oat cake pie macaroon tart donut gummies. Jelly beans candy canes carrot cake. Fruitcake chocolate chupa chups."
+		},{
+			"title": "What is regular lisence?",
+			"description": "Regular license can be used for end products that do not charge users for access or service(access is free and there will be no monthly subscription fee). Single regular license can be used for single end product and end product can be used by you or your client. If you want to sell end product to multiple clients then you will need to purchase separate license for each client. The same rule applies if you want to use the same end product on multiple domains(unique setup). For more info on regular license you can check official description."
+		},{
+			"title": "What is extended license?",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis et aliquid quaerat possimus maxime! Mollitia reprehenderit neque repellat delenibx delectus architecto dolorum maxime, blanditiis earum ea, incidunt quam possimus cumque."
+		},{
+			"title": "Which Lisense is applicable for a Saas Application?",
+			"description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi molestias exercitationem ab cum nemo facere voluptates veritatis quia, eveniet veniam at et repudiandae mollitia ipsam quasi labore enim architecto non!"
+		}
+	],
+	"pricing_plan2": [
+		{
+			"plan": "Basic",
+			"desc": "A simple start for everyone",
+			"price/m": 0,
+			"points": [
+				"100 responses a month",
+				"Unlimited forms and surveys",
+				"Unlimited fields",
+				"Basic form creation tools",
+				"Up to 2 subdomains"
+			]
+		},
+		{
+			"plan": "Pro_test",
+			"desc": "For small to medium business",
+			"price/m": 7,
+			"points": [
+				"Up to 5 users",
+				"120+ componentse",
+				"Basic support on Github",
+				"Monthly updates",
+				"Integrations"
+			]
+		},
+		{
+			"plan": "Entreprise_test",
+			"desc": "Solution for big organizations",
+			"price/m": 16,
+			"points": [
+				"Up to 10 users",
+				"150+ components",
+				"Basic support on Github",
+				"Monthly updates",
+				"Custom permissions"
+			]
+		}
+	],
+	"faq2": [
+		
+		{
+			"title": "How do you process payments?",
+			"description": "We accept Visa®, MasterCard®, American Express®, and PayPal®. So you can be confident that your credit card information will be kept safe and secure."
+		},
+		{
+			"title": "What counts towards the 100 response limits?",
+			"description": "We count all responses submitted through all your forms in a month. If you already received 100 responses this month, you won’t be able to receive any more of them until next month when the counter resets."
+		},{
+			"title": "What payment method do you accept?",
+			"description": "2Checkout accepts all types of credit and debit cards."
+		}
+	],
+
+	"course":{
+		"title": "Learn English",
+		"description": "Enhance your English skills to thrive in today's globalized world. Just as Angular revolutionizes web development, mastering English opens doors to opportunities. Explore grammar, conversation, and immersion techniques to accelerate your progress. Start your linguistic journey now and unlock new horizons of communication.",
+		"lessons": 28,
+		"time" : {
+			"hours": 2,
+			"minutes": 46
+		},
+		"introduction": "Embark on a journey to enhance your English proficiency. Explore a structured approach to mastering the language, enabling you to communicate effectively in various contexts.",
+		"outcomes": [
+			"Build a strong English foundation.",
+			"Learn to write clear compositions.",
+			"Improve vocabulary and fluency.",
+			"Explore advanced grammar concepts.",
+			"Master listening and speaking skills."
+		],
+		"current_level": 1,
+		"total_levels": 4,
+		"levels_info": 
+			[
+				{
+					"level_no": 1,
+					"level_name": "Beginner",
+					"description": "Embark on an enriching journey to master the English language! In these courses designed for beginners, you will explore core concepts, practice common patterns of English usage, and discover essential best practices to develop a strong foundation in the language.",
+					"modules": [
+						{
+							"module_name": "Module 1",
+							"module_title": "Introduction to English Grammar"
+						},
+						{
+							"module_name": "Module 2",
+							"module_title": "Basic Vocabulary Building"
+						},
+						{
+							"module_name": "Module 3",
+							"module_title": "Everyday Conversation Skills"
+						},
+						{
+							"module_name": "Module 4",
+							"module_title": "Reading Comprehension Practice"
+						}
+					]
+				}
+,{
+						"level_no": 2,
+						"level_name": "Intermediate",
+						"description": "Take your English proficiency to the next level with our intermediate courses! Dive deeper into the intricacies of the language as you refine your skills in grammar, vocabulary, and communication. Through engaging modules, you'll tackle more complex concepts, hone your writing and speaking abilities, and gain confidence in expressing yourself fluently.",
+						"modules": [
+							{
+								"module_name": "Module 1",
+								"module_title": "Advanced Grammar"
+							},
+							{
+								"module_name": "Module 2",
+								"module_title": "Vocabulary Expansion"
+							},
+							{
+								"module_name": "Module 3",
+								"module_title": "Effective Communication"
+							},
+							{
+								"module_name": "Module 4",
+								"module_title": "Reading Comprehension"
+							}
+						]
+					},{
+						"level_no": 3,
+						"level_name": "Advanced",
+						"description": "Elevate your English fluency to an advanced level through our comprehensive courses designed to push your boundaries and expand your horizons. Dive into nuanced topics like advanced syntax, idiomatic expressions, and sophisticated literary analysis. Engage in lively discussions, tackle complex texts, and refine your writing with expert guidance. Our advanced modules empower you to communicate with eloquence and precision in both formal and informal settings.",
+						"modules": [
+							{
+								"module_name": "Module 1",
+								"module_title": "Advanced Syntax and Semantics"
+							},
+							{
+								"module_name": "Module 2",
+								"module_title": "Idiomatic Expressions and Phrases"
+							},
+							{
+								"module_name": "Module 3",
+								"module_title": "Literary Analysis and Critique"
+							},
+							{
+								"module_name": "Module 4",
+								"module_title": "Effective Public Speaking"
+							}
+						]
+					}
+
+
+			]
+	},
+
+	"score": [
+		{
+			"category": "basic",
+			"ep" :     "+15"
+		},
+		{
+			"category": "vocabulary",
+			"ep" :     "-15"
+		},
+		{
+			"category": "fluency",
+			"ep" :     "-15"
+		},{
+			"category": "grammar",
+			"ep" :     "+15"
+		}
+	]
+}
