@@ -5,8 +5,8 @@ export default {
 		extend: {
 			colors: {
 				"gray-normal": "#566a7f",
-				"blue-normal": "#696cff",
-				"light-blue-normal": "#e7e7ff",
+				"blue-normal": "#FF9738",
+				"light-blue-normal": "#FFFFFF",
 				"card-blue-normal": "#f5f5f9",
 				"dark-blue-normal": "#38344c",
 				"primary-violet": "#7E57D8FF",

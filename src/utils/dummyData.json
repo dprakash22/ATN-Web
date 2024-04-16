@@ -1,65 +1,65 @@
 {
 	"features": [
 		{
-			"title": "Quality Code",
-			"description": "Code structure that all developers will easily understand and fall in love with."
+			"title": "LoRa Network",
+			"description": "LoRa technology to establish a  network infrastructure for communication and data transmission"
 		},
 		{
-			"title": "Continuous Updates",
-			"description": "Free updates for the next 12 months, including new demos and features."
+			"title": "Realtime Updates",
+			"description": " Provide real-time updates on the platform, keeping NGOs informed about the latest needs"
 		},
 		{
-			"title": "Stater-Kit",
-			"description": "Start your project quickly without having to remove unnecessary features."
+			"title": "Emergency Support",
+			"description": "Enable emergency service providers to easily connect to the platform."
 		},
 		{
-			"title": "API Ready",
-			"description": "Just change the endpoint and see your own data loaded within seconds."
+			"title": "Cloud Storage",
+			"description": "Cloud storage to securely transmit and store data collected from remote or disaster-affected areas"
 		},
 		{
-			"title": "Excellent Support",
-			"description": "An easy-to-follow doc with lots of references and code examples."
+			"title": "NGO's Platform",
+			"description": "Connect NGOs and relief organizations to the platform, enabling them to access and contribute to disaster relief efforts.."
 		},
 		{
-			"title": "Well Documented",
-			"description": "An easy-to-follow doc with lots of references and code examples."
+			"title": "Verified Information",
+			"description": "The details provided in the website is trustable and verifiable."
 		}
 	],
 	"pricing_plan": [
 		{
 			"plan": "Basic",
-			"desc": "A simple start for everyone",
-			"price/m": 0,
+			"desc": "A simple start for all NGO's",
+			"price/m": 499,
 			"points": [
-				"100 responses a month",
-				"Unlimited forms and surveys",
-				"Unlimited fields",
-				"Basic form creation tools",
-				"Up to 2 subdomains"
+				"Unlimited Request Support",
+				"Basic Admin Dashboard",
+				"Free access to Disaster Information",
+				"Support for Personalized Request",
+				"All in one UI"
 			]
 		},
 		{
-			"plan": "Pro",
+			"plan": "Intermediate",
 			"desc": "For small to medium business",
-			"price/m": 7,
+			"price/m": 1450,
 			"points": [
-				"Up to 5 users",
-				"120+ componentse",
-				"Basic support on Github",
-				"Monthly updates",
-				"Integrations"
+				"Unlimited Request Support",
+				"Admin Dashboard with Analytics",
+				"Free access to Disaster Information",
+				"Monthly and Yearly Report",
+				"Personalized Dashboard"
 			]
 		},
 		{
-			"plan": "Entreprise",
+			"plan": "Advanced",
 			"desc": "Solution for big organizations",
-			"price/m": 16,
+			"price/m": 3000,
 			"points": [
-				"Up to 10 users",
-				"150+ components",
-				"Basic support on Github",
+				"Unlimited Request Support",
+				"QGIS Dashboard Integration",
+				"Admin Dashboard with Analytics",
 				"Monthly updates",
-				"Custom permissions"
+				"Personalized Dashboard"
 			]
 		}
 	],

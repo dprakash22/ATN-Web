@@ -1,13 +1,16 @@
 import PricingCard from "./PricingCard"
 import {pricing_plan} from '../utils/dummyData.json'
-import paper from '../assets/images/font-page/pricing/paper-airplane.png'
-import flight from '../assets/images/font-page/pricing/plane.png'
-import rocket from '../assets/images/font-page/pricing/shuttle-rocket.png'
+import basic from "../assets/images/basic.png"
+import intermediate from "../assets/images/intermediate.png"
+import advanced from "../assets/images/advanced.png"
+
 
 function PricingPlans() {
   return (
-		<div id="pricing" className="w-[100%] bg-card-blue-normal absolute top-[280%] rounded-[5rem] ">
-			<div className="w-[95%] pt-20 mx-auto">
+		<div
+			id="pricing"
+			className="w-[100%]  bg-[#FFF1E4] absolute top-[220rem] rounded-[5rem] ">
+			<div className="w-[95%]  pt-20 mx-auto">
 				<div className="w-fit mx-auto font-public-sans pb-16">
 					<div className="bg-light-blue-normal text-blue-normal rounded-md text-sm p-1 w-fit mx-auto">
 						PRICING PLANS
@@ -21,10 +24,25 @@ function PricingPlans() {
 					</p>
 				</div>
 				<div className="flex justify-center gap-[5%]">
-                    <PricingCard image={paper} title={pricing_plan[0].plan} price={pricing_plan[0]["price/m"]} points={pricing_plan[0].points} />
-                     <PricingCard image={flight} title={pricing_plan[1].plan} price={pricing_plan[1]["price/m"]} points={pricing_plan[1].points} />
-                      <PricingCard image={rocket} title={pricing_plan[2].plan} price={pricing_plan[2]["price/m"]} points={pricing_plan[2].points} />
-                </div>
+					<PricingCard
+						image={basic}
+						title={pricing_plan[0].plan}
+						price={pricing_plan[0]["price/m"]}
+						points={pricing_plan[0].points}
+					/>
+					<PricingCard
+						image={intermediate}
+						title={pricing_plan[1].plan}
+						price={pricing_plan[1]["price/m"]}
+						points={pricing_plan[1].points}
+					/>
+					<PricingCard
+						image={advanced}
+						title={pricing_plan[2].plan}
+						price={pricing_plan[2]["price/m"]}
+						points={pricing_plan[2].points}
+					/>
+				</div>
 			</div>
 		</div>
 	)

@@ -1,10 +1,10 @@
 
-import icon from '../assets/images/font-page/home/icon.png';
+import icon from '../assets/images/ATN logo.png';
 import BlueButton from './BlueButton';
 import {useRef} from 'react'
 import Cookies from "universal-cookie"
-import { useEffect , useState} from "react"
-import { useNavigate, Link } from "react-router-dom"
+import { useState} from "react"
+import { useNavigate } from "react-router-dom"
 // import axios from 'axios'
 // import {userDataRoute} from "../utils/APIRoutes"
 import Proptypes from 'prop-types'
@@ -54,17 +54,14 @@ function Header({ setUpperUser }) {
 		<div className="w-[100vw] z-10 fixed">
 			<div
 				ref={headerRef}
-				className="transition-opacity duration-500  w-[93%] flex items-center mx-auto mt-4 border-2 border-white  bg-white bg-opacity-60 rounded-md h-[5rem] bg-gray">
+				className="transition-opacity duration-500 justify-between pr-4  w-[93%] flex items-center mx-auto mt-4 border-2 border-white  bg-white bg-opacity-60 rounded-md h-[5rem] bg-gray">
 				<a href="/">
 					<div className="flex gap-2 items-centerp-2 pl-2">
 						<img
-							className="w-[2rem] h-[2rem] "
+							className="w-[8rem] h-[5rem] "
 							src={icon}
 							alt="icon image"
 						/>
-						<p className="font-public-sans font-extrabold text-gray-normal text-3xl">
-							sneat
-						</p>
 					</div>
 				</a>
 				<div className="w-[65%] justify-center text-gray-normal font-public-sans font-semibold flex gap-[1rem] text-lg">

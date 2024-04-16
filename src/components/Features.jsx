@@ -1,24 +1,26 @@
 import FeatureItem from "./FeatureItem"
-import check from '../assets/images/font-page/features/check.png';
-import keyboard from '../assets/images/font-page/features/keyboard.png';
-import laptop from '../assets/images/font-page/features/laptop.png';
-import paper from '../assets/images/font-page/features/paper.png';
-import rocket from '../assets/images/font-page/features/rocket.png';
-import user from '../assets/images/font-page/features/user.png';
+import network from "../assets/images/network.png"
+import cloud from "../assets/images/cloud.png"
+import person from '../assets/images/person.png';
+import real from '../assets/images/real.png';
+import shield from '../assets/images/shield.png';
+import phone from '../assets/images/phone.png';
 import{ features } from '../utils/dummyData.json'
 
 
 
 function Features() {
 	return (
-		<div id="features"  className="flex justify-center absolute  top-[170%] w-full">
-			<div className="">
+		<div
+			id="features"
+			className="flex justify-center absolute  top-[170%] w-full">
+			<div className="bg-[#FFF1E4] py-20 rounded-[100px]">
 				<div className="w-fit mx-auto">
 					<span className="bg-light-blue-normal text-blue-normal rounded-md font-public-sans text-sm p-1">
 						USEFUL FEATURES
 					</span>
 				</div>
-				<div className="text-gray-normal w-full text-center pt-4 font-public-sans">
+				<div className=" text-[#20208B] w-full text-center pt-4 font-public-sans">
 					<p className="font-normal  text-2xl">
 						Everything you need to start your next project
 					</p>
@@ -27,36 +29,36 @@ function Features() {
 						conceptual application.
 					</p>
 				</div>
-				<div className="flex flex-wrap w-[100vw] justify-center">
+				<div className="flex  text-[#20208B] flex-wrap w-[100vw] justify-center">
 					<FeatureItem
 						title={features[0].title}
 						desc={features[0].description}
-						image={laptop}
+						image={network}
 					/>
 					<FeatureItem
 						title={features[1].title}
 						desc={features[1].description}
-						image={rocket}
+						image={real}
 					/>
 					<FeatureItem
 						title={features[2].title}
 						desc={features[2].description}
-						image={paper}
+						image={phone}
 					/>
 					<FeatureItem
 						title={features[3].title}
 						desc={features[3].description}
-						image={check}
+						image={cloud}
 					/>
 					<FeatureItem
 						title={features[4].title}
 						desc={features[4].description}
-						image={user}
+						image={person}
 					/>
 					<FeatureItem
 						title={features[5].title}
 						desc={features[5].description}
-						image={keyboard}
+						image={shield}
 					/>
 				</div>
 			</div>
