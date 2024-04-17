@@ -2,7 +2,6 @@
 import icon from '../assets/images/ATN logo.png';
 import BlueButton from './BlueButton';
 import {useRef} from 'react'
-import Cookies from "universal-cookie"
 import { useState} from "react"
 import { useNavigate } from "react-router-dom"
 // import axios from 'axios'
@@ -11,7 +10,6 @@ import Proptypes from 'prop-types'
 
 function Header({ setUpperUser }) {
 	const [user, setUser] = useState(null)
-	const cookies = new Cookies()
 	const navigate = useNavigate()
 	const headerRef = useRef(null)
 	window.addEventListener("scroll", function () {
@@ -26,7 +24,7 @@ function Header({ setUpperUser }) {
 			header.classList.add("bg-opacity-60")
 		}
 	})
-	const token = cookies.get("harshan_ai_access_token")
+	// const token = cookies.get("harshan_ai_access_token")
 	// useEffect(() => {
 	// 	const token = cookies.get("harshan_ai_access_token")
 
@@ -43,13 +41,13 @@ function Header({ setUpperUser }) {
 	// 	fetchUserData()
 	// }, [])
 	const handleLogin = () => {
-		navigate("/login")
+		navigate("/login") 
 	}
-	const handleLogout = () => {
-		cookies.remove("harshan_ai_access_token")
-		cookies.remove("harshan_ai_access_token_expiration")
-		window.location.reload()
-	}
+	// const handleLogout = () => {
+	// 	cookies.remove("harshan_ai_access_token")
+	// 	cookies.remove("harshan_ai_access_token_expiration")
+	// 	window.location.reload()
+	// }
 	return (
 		<div className="w-[100vw] z-10 fixed">
 			<div

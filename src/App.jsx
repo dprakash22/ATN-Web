@@ -1,10 +1,9 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Dashboard from './components/Dashboard'
+import Dashboard from './pages/Dashboard'
 import LandingPage from './pages/LandingPage'
 import StartingPage from './components/StartingPage'
 import Loginpage from './components/Loginpage.jsx'
-import Home from './pages/Home'
 import Leftside from './components/Leftside.jsx'
 import Signup from './components/Signup.jsx'
 
@@ -21,8 +20,10 @@ const App=()=>{
 					element={<Loginpage />}
 				/>
 				<Route
-					path="/"
+					path="/land"
 					element={<LandingPage />}
+				/>
+				<Route
 					path="/signup"
 					element={<Signup />}
 				/>
