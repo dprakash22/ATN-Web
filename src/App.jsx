@@ -1,5 +1,7 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Dashboard from './components/Dashboard'
+import LandingPage from './pages/LandingPage'
 import StartingPage from './components/StartingPage'
 import Loginpage from './components/Loginpage.jsx'
 import Home from './pages/Home'
@@ -19,6 +21,8 @@ const App=()=>{
 					element={<Loginpage />}
 				/>
 				<Route
+					path="/"
+					element={<LandingPage />}
 					path="/signup"
 					element={<Signup />}
 				/>
