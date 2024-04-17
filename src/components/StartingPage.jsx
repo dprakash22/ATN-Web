@@ -2,7 +2,7 @@ import '../assets/images/first.jpg'
 import '../assets/images/ATN logo.png'
 import '../assets/firstcss.css';
 
-const First=()=>{
+const StartingPage=()=>{
     return (
         <>
         <div className='container'>
@@ -15,4 +15,4 @@ const First=()=>{
         </>
     )
 }
-export default First
+export default StartingPage
