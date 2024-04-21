@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom'
 import '../assets/images/ATN logo.png'
 import '../assets/images/globe1.png'
 import '../assets/leftside.css'
@@ -34,9 +35,7 @@ const Leftside=()=>{
                 </div>
             </div>
         </div>
-
-        {/* <Dashboard/> */}
-        <Product/>
+        <Outlet/>
         </div>
 
         </>
