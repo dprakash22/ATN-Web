@@ -1,12 +1,13 @@
 import React from 'react'
 import '../assets/product.css'
+import profile from "../assets/images/profile.png"
 
 function Product() {
   return (
     <div className='right'>
         <div className="head">
                 <b>Deepak Prakash</b>
-                <img className='profile' width={'55px'} src="src/assets/images/profile.png" alt="pic" />
+                <img className='profile' width={'55px'} src={profile} alt="pic" />
         </div>
 
         <div className='victim'>
