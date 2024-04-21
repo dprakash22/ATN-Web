@@ -26,7 +26,7 @@ function Loginpage() {
 
             <div className='below'>
             <button className='btn'>Login</button>
-            <h2>Don't have an account? <a href='#'>sign up</a></h2>
+            <h2>Don't have an account? <a href='/signUp'>sign up</a></h2>
             </div>
             
         </div>

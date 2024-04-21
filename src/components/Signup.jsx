@@ -43,7 +43,7 @@ function Signup() {
         <button className="submit" onClick={e => {e.preventDefault();handleValues()}}>Create</button>
         
         <p className="signin">
-          Already have an account? <h1><a href="/"><b>Login</b> </a></h1>
+          Already have an account? <h1><a href="/login"><b>Login</b> </a></h1>
         </p>
       </form>
       <div className='quotes'>
