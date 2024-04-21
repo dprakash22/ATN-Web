@@ -1,8 +1,18 @@
 import '../assets/images/first.jpg'
 import '../assets/images/ATN logo.png'
 import '../assets/firstcss.css';
+import React, { useEffect } from 'react';
 
 const StartingPage=()=>{
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          window.location.href = "/land";
+        }, 3000);
+    
+        return () => clearTimeout(timer);
+      }, []);
+
     return (
         <>
         <div className='container'>
