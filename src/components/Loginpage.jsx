@@ -1,7 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../assets/Login.css'
+import { useNavigate } from 'react-router-dom';
 
 function Loginpage() {
+
+  const [logName , setLogName] = useState();
+  const[logPass , setLogPass ] = useState();
+  const navigate = useNavigate();
+
+  const loginButton = async() => {
+    console.log("Login has started");
+
+    console.log("name :" + logName + "Pass : " + logPass)
+
+    const res = await fetch( "http://localhost:8000/user/login", {
+      method : "POST",
+      headers : {
+        "Content-type" : "application/json"
+      },
+      body : JSON.stringify({"email":logName,"password":logPass})
+    } )
+
+    const data = await res.json();
+    console.log(data);
+
+    if(data.data == true){
+      console.log("Everything is ok");
+      navigate('/leftside/')
+    }
+  }
   return (
     <div>
       <img src="" alt="" />
@@ -14,9 +41,9 @@ function Loginpage() {
 
             <div className='inputfield'>
             <h1>Username</h1>
-            <input  type="text" id="name" placeholder='Username' style={{}}/>
+            <input  type="text" id="name" placeholder='Username' style={{}} onChange={e => {setLogName(e.target.value)}}/>
             <h1>Password</h1>
-            <input type="text" id="pass" placeholder='Password' style={{}}/>
+            <input type="text" id="pass" placeholder='Password' style={{}} onChange={e => {setLogPass(e.target.value)}}/>
             </div>
 
             <div className='links'>
@@ -25,7 +52,7 @@ function Loginpage() {
             </div>
 
             <div className='below'>
-            <button className='btn'>Login</button>
+            <button className='btn' onClick={loginButton}>Login</button>
             <h2>Don't have an account? <a href='/signUp'>sign up</a></h2>
             </div>
             
