@@ -21,7 +21,7 @@ const Leftside=()=>{
                 </div>
 
                 <div className='titles'>
-                    <img width={'35px'} style={{marginLeft:'3px',marginTop:'6px'}} src={complete} alt='pic'></img>
+                    <img width={'35px'} height={'35px'} style={{marginLeft:'3px',marginTop:'6px'}} src={complete} alt='pic'></img> 
                     <h4 style={{ marginTop: '14px', marginLeft:'10px',marginBottom:'5px' }}>Completed Request  <code>&gt;</code></h4>
                 </div>
 
