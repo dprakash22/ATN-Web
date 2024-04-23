@@ -28,15 +28,17 @@ function Dashboard() {
 
     useEffect(()=>{fetch_data()},[]);
 
-    console.log("this is the dashDara " + dashData + typeof(dashData));
+    console.log("type of dashDara "+ typeof(dashData));
     // console.log("Summa oru try" + dashData.status)
    
     useEffect(() => {
-        console.log("We have entered into DashData of the board")
-        console.log("this is the dashData", dashData);
+        // console.log("We have entered into DashData of the board")
+        // console.log("this is the dashData", dashData);
+        console.log("type of dashData : " , typeof(dashData) + dashData.keys)
         if (dashData.length > 0) {
             dashData.forEach(request => {
                 console.log("Status:", request.status);
+                console.log("Date :" , request.createdAt)
             });
         }
     }, [dashData]);
@@ -123,15 +125,17 @@ function Dashboard() {
                      </thead>
                     <tbody>
                          
-                        {dashData && Array.isArray(dashData) && dashData.map((val, index) => (
-                        <tr key={index}>
+                        {dashData && Array.isArray(dashData) && dashData.map((val) => {
+                        return (
+                            <tr>
                             <td>Deepa & Deva</td>
                             <td>10</td>
                             <td>9368978546</td>
                             <td>{val.createdAt}</td>
                             <td><div className="status">{val.status}</div></td>
                         </tr>
-                        ))}
+                        )
+})}
                     </tbody>
                 </table>
         </div>
