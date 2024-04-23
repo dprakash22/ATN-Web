@@ -30,7 +30,7 @@ function Dashboard() {
             try {
                 if (dashData.data && dashData.data.length > 0) {
                     const userIds = await dashData.data.map(item => item.userID);
-                    const userDetailsPromises = await userIds.map(userId => {
+                    const userDetPro = await userIds.map(userId => {
                         return fetch("http://localhost:8000/user/allUsers", {
                             method: "POST",
                             headers: {
@@ -41,11 +41,11 @@ function Dashboard() {
                             .then(response => response.json())
                             .then(data => ({ [userId]: data }));
                     });
-                    const userDetailsResponses = await Promise.all(userDetailsPromises);
-                    const userDetailsObject = userDetailsResponses.reduce((acc, curr) => {
+                    const userDetRes = await Promise.all(userDetPro);
+                    const userDetObj = userDetRes.reduce((acc, curr) => {
                         return { ...acc, ...curr };
                     }, {});
-                    setUserDetails(userDetailsObject);
+                    setUserDetails(userDetObj);
                 }
             } catch (error) {
                 console.error("Error fetching user details:", error);
