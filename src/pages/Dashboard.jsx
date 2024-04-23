@@ -11,35 +11,57 @@ function Dashboard() {
     const [date , ssetDate] = useState();
     const [ status , setStatus] = useState();
 
-    const fetch_data = async () => {
-        try {
-            const url = "http://localhost:8000/user/allRequests";
-            console.log(url)
-            const response = await fetch(url);
-            const dashContainer = await response.json();
-            setDashData(dashContainer); 
-        } 
-        catch (error) {
-            console.error("Error fetching data:");
-            console.log(error);
-        }
-    };
+    // const fetch_data = async () => {
+    //     try {
+    //         const url = "http://localhost:8000/user/allRequests";
+    //         console.log(url)
+    //         const response = await fetch(url);
+    //         const dashContainer = await response.json();
+    //         setDashData(dashContainer); 
+    //         // console.log(dashData)
+    //     } 
+    //     catch (error) {
+    //         console.error("Error fetching data:");
+    //         console.log(error);
+    //     }
+    // };
     
 
-    useEffect(()=>{fetch_data()},[]);
+    // useEffect(()=>{fetch_data()},[]);
 
-    console.log("this is the dashDara " + dashData + typeof(dashData));
-    // console.log("Summa oru try" + dashData.status)
+    // console.log("this is the dashDara " + dashData+"dnsknsd " + typeof(dashData));
+    // // console.log("Summa oru try" + dashData.status)
    
+    // useEffect(() => {
+    //     console.log("We have entered into DashData of the board")
+    //     console.log("this is the dashData1", dashData);
+    //     if (dashData.length > 0) {
+    //         dashData.forEach(request => {
+    //             console.log("Status:", request.status);
+    //         });
+    //     }
+    // }, [dashData]);
+
+
     useEffect(() => {
-        console.log("We have entered into DashData of the board")
-        console.log("this is the dashData", dashData);
-        if (dashData.length > 0) {
-            dashData.forEach(request => {
-                console.log("Status:", request.status);
-            });
-        }
-    }, [dashData]);
+        const fetch_data = async () => {
+            try {
+                const url = "http://localhost:8000/user/allRequests";
+                const response = await fetch(url);
+                const dashContainer = await response.json();
+                setDashData(dashContainer); 
+                console.log(dashData)
+            } 
+            catch (error) {
+                console.error("Error fetching data:");
+                console.log(error);
+            }
+        };
+
+        fetch_data();
+    }, []);
+
+    console.log(dashData)
 
   return (
         <>
@@ -122,16 +144,19 @@ function Dashboard() {
                          </tr>
                      </thead>
                     <tbody>
+                    
                          
-                        {dashData && Array.isArray(dashData) && dashData.map((val, index) => (
-                        <tr key={index}>
-                            <td>Deepa & Deva</td>
-                            <td>10</td>
-                            <td>9368978546</td>
-                            <td>{val.createdAt}</td>
-                            <td><div className="status">{val.status}</div></td>
-                        </tr>
-                        ))}
+                    {dashData && Object.entries(dashData).map(([key, val]) => (
+                    <tr key={key}>
+                        <td>deepak</td>
+                        <td>23</td>
+                        <td>smaoms</td>
+                        <td>{val.createdAt}</td>
+                        <td><div className="status">{val.status}</div></td>
+                    </tr>
+                ))}
+
+
                     </tbody>
                 </table>
         </div>
