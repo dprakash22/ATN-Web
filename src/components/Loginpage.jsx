@@ -28,6 +28,9 @@ function Loginpage() {
       console.log("Everything is ok");
       navigate('/leftside/')
     }
+    else {
+      console.log("Error in login")
+    }
   }
   return (
     <div>
@@ -40,7 +43,7 @@ function Loginpage() {
             </div>
 
             <div className='inputfield'>
-            <h1>Username</h1>
+            <h1>Email</h1>
             <input  type="text" id="name" placeholder='Username' style={{}} onChange={e => {setLogName(e.target.value)}}/>
             <h1>Password</h1>
             <input type="text" id="pass" placeholder='Password' style={{}} onChange={e => {setLogPass(e.target.value)}}/>

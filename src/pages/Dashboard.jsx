@@ -45,7 +45,7 @@ function Dashboard() {
         <>
         <div className='right'>
             <div className="head">
-                <b>Deepa Prakashi</b>
+                <b>Deepa Deva</b>
                 <img className='profile' width={'55px'} src={profile} alt="pic" />
             </div>
 
@@ -131,7 +131,7 @@ function Dashboard() {
                          
                         {dashData && Array.isArray(dashData) && dashData.map((val, index) => (
                         <tr key={index}>
-                            <td>Deepa</td>
+                            <td>Deepa & Deva</td>
                             <td>10</td>
                             <td>9368978546</td>
                             <td>{val.createdAt}</td>
