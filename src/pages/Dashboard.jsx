@@ -11,37 +11,25 @@ function Dashboard() {
     const [date , ssetDate] = useState();
     const [ status , setStatus] = useState();
 
-    const fetch_data = async () => {
-        try {
-            const url = "http://localhost:8000/user/allRequests";
-            console.log(url)
-            const response = await fetch(url);
-            const dashContainer = await response.json();
-            setDashData(dashContainer); 
-        } 
-        catch (error) {
-            console.error("Error fetching data:");
-            console.log(error);
-        }
-    };
-    
-
-    useEffect(()=>{fetch_data()},[]);
-
-    console.log("type of dashDara "+ typeof(dashData));
-    // console.log("Summa oru try" + dashData.status)
-   
     useEffect(() => {
-        // console.log("We have entered into DashData of the board")
-        // console.log("this is the dashData", dashData);
-        console.log("type of dashData : " , typeof(dashData) + dashData.keys)
-        if (dashData.length > 0) {
-            dashData.forEach(request => {
-                console.log("Status:", request.status);
-                console.log("Date :" , request.createdAt)
-            });
-        }
-    }, [dashData]);
+        const fetch_data = async () => {
+            try {
+                const url = "http://localhost:8000/user/allRequests";
+                const response = await fetch(url);
+                const dashContainer = await response.json();
+                setDashData(dashContainer); 
+                console.log(dashData)
+            } 
+            catch (error) {
+                console.error("Error fetching data:");
+                console.log(error);
+            }
+        };
+
+        fetch_data();
+    }, []);
+
+    console.log(dashData)
 
   return (
         <>
@@ -70,48 +58,7 @@ function Dashboard() {
                         <option value="Madurai">Madurai</option>
                     </select>
                 </div>
-            </div>
-
-            {/* <table className='t1'>
-                <thead>
-                    <tr>
-                        <th>Person Name</th>
-                        <th>No.of items Required</th>
-                        <th>Phone Number</th>
-                        <th>Date</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-
-                
-
-                <tr>
-                    <td>Deepak</td>
-                    <td>20</td>
-                    <td>9328741897</td>
-                    <td>14-04-2024</td>
-                    <td><div className='status'>Incompleted</div></td>
-                </tr>
-
-                <tr>
-                    <td>Prakash</td>
-                    <td>18</td>
-                    <td>9328741897</td>
-                    <td>14-04-2024</td>
-                    <td><div className='status'>Completed</div></td>
-                </tr>
-
-
-                <tr>
-                    <td>Guhan</td>
-                    <td>9</td>
-                    <td>9328741897</td>
-                    <td>14-04-2024</td>
-                    <td><div className='status'>Completed</div></td>
-                </tr>
-            </table> */}
-
-            
+            </div>            
 
             <table className="t1">
                      <thead>
@@ -124,18 +71,20 @@ function Dashboard() {
                          </tr>
                      </thead>
                     <tbody>
-                         
-                        {dashData && Array.isArray(dashData) && dashData.map((val) => {
-                        return (
-                            <tr>
-                            <td>Deepa & Deva</td>
-                            <td>10</td>
-                            <td>9368978546</td>
-                            <td>{val.createdAt}</td>
-                            <td><div className="status">{val.status}</div></td>
-                        </tr>
-                        )
-})}
+                    
+                         {console.log(dashData)}
+                    {Object.entries(dashData.data).map(([key, val]) => (
+                    <tr key={key}>
+                        <td>deepak</td>
+                        <td>23</td>
+                        <td>number</td>
+                        <td>{val.createdAt}</td>
+                        {}
+                        <td><div className="status">{val.status}</div></td>
+                    </tr>
+                ))}
+
+
                     </tbody>
                 </table>
         </div>
