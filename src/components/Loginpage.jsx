@@ -43,6 +43,9 @@ function Loginpage() {
             </div>
 
             <div className='inputfield'>
+
+
+              
             <h1>Email</h1>
             <input  type="text" id="name" placeholder='Username' style={{}} onChange={e => {setLogName(e.target.value)}}/>
             <h1>Password</h1>

@@ -81,13 +81,7 @@ function Dashboard() {
                     </tr>
                 </thead>
 
-                <tr>
-                    <td>Dharun</td>
-                    <td>10</td>
-                    <td>9328741897</td>
-                    <td>14-04-2024</td>
-                    <td><div className='status'>Completed</div></td>
-                </tr>
+                
 
                 <tr>
                     <td>Deepak</td>
