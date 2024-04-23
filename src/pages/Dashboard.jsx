@@ -20,7 +20,8 @@ function Dashboard() {
             setDashData(dashContainer); 
         } 
         catch (error) {
-            console.error("Error fetching data:", error);
+            console.error("Error fetching data:");
+            console.log(error);
         }
     };
     
@@ -31,6 +32,7 @@ function Dashboard() {
     // console.log("Summa oru try" + dashData.status)
    
     useEffect(() => {
+        console.log("We have entered into DashData of the board")
         console.log("this is the dashData", dashData);
         if (dashData.length > 0) {
             dashData.forEach(request => {
@@ -68,7 +70,7 @@ function Dashboard() {
                 </div>
             </div>
 
-            <table className='t1'>
+            {/* <table className='t1'>
                 <thead>
                     <tr>
                         <th>Person Name</th>
@@ -111,11 +113,11 @@ function Dashboard() {
                     <td>14-04-2024</td>
                     <td><div className='status'>Completed</div></td>
                 </tr>
-            </table>
+            </table> */}
 
             
 
-            {/* <table className="t1">
+            <table className="t1">
                      <thead>
                          <tr>
                              <th>Person Name</th>
@@ -127,17 +129,17 @@ function Dashboard() {
                      </thead>
                     <tbody>
                          
-                        {dashData.map((request, index) => (
-                            <tr key={index}>
-                                <td>{request.personName}</td>
-                                <td>{request.numItemsRequired}</td>
-                                <td>{request.phoneNumber}</td>
-                                <td>{request.date}</td>
-                                <td><div className="status">{request.status}</div></td>
-                            </tr>
+                        {dashData && Array.isArray(dashData) && dashData.map((val, index) => (
+                        <tr key={index}>
+                            <td>Deepa</td>
+                            <td>10</td>
+                            <td>9368978546</td>
+                            <td>{val.createdAt}</td>
+                            <td><div className="status">{val.status}</div></td>
+                        </tr>
                         ))}
                     </tbody>
-                </table> */}
+                </table>
         </div>
         </>
     )
