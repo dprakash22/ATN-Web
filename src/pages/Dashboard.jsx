@@ -59,15 +59,14 @@ function Dashboard() {
         const formattedDate = date.toISOString().split('T')[0];
         return formattedDate;
     }
-    
-
+        let c=124;
     console.log(dashData)
 
   return (
         <>
         <div className='right'>
             <div className="head">
-                <b>Deepa Deva</b>
+                <b>Deepak Prakash</b>
                 <img className='profile' width={'55px'} src={profile} alt="pic" />
             </div>
 
@@ -88,6 +87,71 @@ function Dashboard() {
                         <option value="Coimbatore">Coimbatore</option>
                         <option value="Trichy">Trichy</option>
                         <option value="Madurai">Madurai</option>
+                        <option value="Salem">Salem</option>
+                        <option value="Tirunelveli">Tirunelveli</option>
+                        <option value="Tiruchirappalli">Tiruchirappalli</option>
+                        <option value="Erode">Erode</option>
+                        <option value="Vellore">Vellore</option>
+                        <option value="Tiruppur">Tiruppur</option>
+                        <option value="Thoothukudi">Thoothukudi</option>
+                        <option value="Thanjavur">Thanjavur</option>
+                        <option value="Kanyakumari">Kanyakumari</option>
+                        <option value="Dindigul">Dindigul</option>
+                        <option value="Ramanathapuram">Ramanathapuram</option>
+                        <option value="Virudhunagar">Virudhunagar</option>
+                        <option value="Karur">Karur</option>
+                        <option value="Namakkal">Namakkal</option>
+                        <option value="Sivaganga">Sivaganga</option>
+                        <option value="Cuddalore">Cuddalore</option>
+                        <option value="Nagapattinam">Nagapattinam</option>
+                        <option value="Tiruvarur">Tiruvarur</option>
+                        <option value="Theni">Theni</option>
+                        <option value="Pudukkottai">Pudukkottai</option>
+                        <option value="Krishnagiri">Krishnagiri</option>
+                        <option value="Ariyalur">Ariyalur</option>
+                        <option value="The Nilgiris">The Nilgiris</option>
+                        <option value="Perambalur">Perambalur</option>
+                        <option value="Tiruvallur">Tiruvallur</option>
+                        <option value="Tiruvannamalai">Tiruvannamalai</option>
+                        <option value="Kancheepuram">Kancheepuram</option>
+                        <option value="Tirupathur">Tirupathur</option>
+                        <option value="Ranipet">Ranipet</option>
+                        <option value="Tenkasi">Tenkasi</option>
+                        <option value="Viluppuram">Viluppuram</option>
+                        <option value="Nagercoil">Nagercoil</option>
+                        <option value="Hosur">Hosur</option>
+                        <option value="Ambur">Ambur</option>
+                        <option value="Arakkonam">Arakkonam</option>
+                        <option value="Sankarankovil">Sankarankovil</option>
+                        <option value="Karaikudi">Karaikudi</option>
+                        <option value="Neyveli">Neyveli</option>
+                        <option value="Udhagamandalam">Udhagamandalam</option>
+                        <option value="Thiruthani">Thiruthani</option>
+                        <option value="Aruppukkottai">Aruppukkottai</option>
+                        <option value="Mayiladuthurai">Mayiladuthurai</option>
+                        <option value="Salem district">Salem district</option>
+                        <option value="Vaniyambadi">Vaniyambadi</option>
+                        <option value="Pallavaram">Pallavaram</option>
+                        <option value="Gudiyatham">Gudiyatham</option>
+                        <option value="Kanchipuram district">Kanchipuram district</option>
+                        <option value="Mettupalayam">Mettupalayam</option>
+                        <option value="Sivagangai">Sivagangai</option>
+                        <option value="Karaikal district">Karaikal district</option>
+                        <option value="Thiruvarur district">Thiruvarur district</option>
+                        <option value="Perundurai">Perundurai</option>
+                        <option value="Ponneri">Ponneri</option>
+                        <option value="Avadi">Avadi</option>
+                        <option value="Tirupattur">Tirupattur</option>
+                        <option value="Ulundurpettai">Ulundurpettai</option>
+                        <option value="Thiruvallur district">Thiruvallur district</option>
+                        <option value="Kumbakonam">Kumbakonam</option>
+                        <option value="Thiruvannamalai district">Thiruvannamalai district</option>
+                        <option value="Vriddhachalam">Vriddhachalam</option>
+                        <option value="Villupuram district">Villupuram district</option>
+                        <option value="Thiruporur">Thiruporur</option>
+                        <option value="Kallakurichi district">Kallakurichi district</option>
+                        <option value="Tindivanam">Tindivan</option>
+
                     </select>
                 </div>
             </div>            
@@ -97,7 +161,7 @@ function Dashboard() {
                          <tr>
                              <th>Person Name</th>
                              <th>No.of items Required</th>
-                             <th>Phone Number</th>
+                             <th>Address</th>
                              <th>Date</th>
                              <th>Status</th>
                          </tr>
@@ -105,10 +169,10 @@ function Dashboard() {
                     <tbody>
                     
                          {console.log(dashData)}
-                    {dashData.data && Object.entries(dashData.data).map(([key, val]) => (
+                    {dashData.data && Object.entries(dashData.data).map(([key, val]) => ( 
                         <tr key={key}>
-                            <td>{userDetails[val.userID] ? userDetails[val.userID].fname : "Unknown"}</td>
-                            <td>23</td>
+                            <td><a href='http://localhost:5173/leftside/product'> {userDetails[val.userID] ? userDetails[val.userID].fname : "Unknown"}</a></td>
+                            <td>{c-=7}</td>
                             <td>{userDetails[val.userID] ? userDetails[val.userID].address : "Unknown"}</td>
                             <td>{formatted(val.createdAt)}</td>
                             <td><div className="status">{val.status}</div></td>
