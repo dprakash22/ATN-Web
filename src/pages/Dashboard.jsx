@@ -97,7 +97,16 @@ function Dashboard() {
                      </thead>
                     <tbody>
                     
-                         
+                         {console.log(dashData)}
+                    {dashData.data && Object.entries(dashData.data).map(([key, val]) => (
+                        <tr key={key}>
+                            <td>{userDetails[val.userID] ? userDetails[val.userID].fname : "Unknown"}</td>
+                            <td>23</td>
+                            <td>{val.userID}</td>
+                            <td>{val.createdAt}</td>
+                            <td><div className="status">{val.status}</div></td>
+                        </tr>
+                ))}
 
 
                     </tbody>
