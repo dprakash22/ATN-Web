@@ -30,8 +30,17 @@ function Dashboard() {
             try {
                 if (dashData.data && dashData.data.length > 0) {
                     const userIds = await dashData.data.map(item => item.userID);
-                    
-                    
+                    const userDetailsPromises = await userIds.map(userId => {
+                        return fetch("http://localhost:8000/user/allUsers", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                            body: JSON.stringify({ userID: userId }),
+                        })
+                            .then(response => response.json())
+                            .then(data => ({ [userId]: data }));
+                    });
                     const userDetailsResponses = await Promise.all(userDetailsPromises);
                     const userDetailsObject = userDetailsResponses.reduce((acc, curr) => {
                         return { ...acc, ...curr };
