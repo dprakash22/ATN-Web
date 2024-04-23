@@ -5,11 +5,7 @@ import { useState , useEffect } from 'react'
 function Dashboard() {
 
     const [dashData , setDashData] = useState([]);
-    const [personal, setPersonal] = useState();
-    const [numItems , setNumItems] = useState();
-    const [phone , setPhone ] = useState();
-    const [date , ssetDate] = useState();
-    const [ status , setStatus] = useState();
+    const [userDetails, setUserDetails] = useState({});
 
     useEffect(() => {
         const fetch_data = async () => {
@@ -28,6 +24,26 @@ function Dashboard() {
 
         fetch_data();
     }, []);
+
+    useEffect(() => {
+        const fetchUserDetails = async () => {
+            try {
+                if (dashData.data && dashData.data.length > 0) {
+                    const userIds = await dashData.data.map(item => item.userID);
+                    
+                    
+                    const userDetailsResponses = await Promise.all(userDetailsPromises);
+                    const userDetailsObject = userDetailsResponses.reduce((acc, curr) => {
+                        return { ...acc, ...curr };
+                    }, {});
+                    setUserDetails(userDetailsObject);
+                }
+            } catch (error) {
+                console.error("Error fetching user details:", error);
+            }
+        };
+        fetchUserDetails();
+    }, [dashData]);
 
     console.log(dashData)
 
@@ -73,15 +89,14 @@ function Dashboard() {
                     <tbody>
                     
                          {console.log(dashData)}
-                    {Object.entries(dashData.data).map(([key, val]) => (
-                    <tr key={key}>
-                        <td>deepak</td>
-                        <td>23</td>
-                        <td>number</td>
-                        <td>{val.createdAt}</td>
-                        {}
-                        <td><div className="status">{val.status}</div></td>
-                    </tr>
+                    {dashData.data && Object.entries(dashData.data).map(([key, val]) => (
+                        <tr key={key}>
+                            <td>{userDetails[val.userID] ? userDetails[val.userID].fname : "Unknown"}</td>
+                            <td>23</td>
+                            <td>{val.userID}</td>
+                            <td>{val.createdAt}</td>
+                            <td><div className="status">{val.status}</div></td>
+                        </tr>
                 ))}
 
 
