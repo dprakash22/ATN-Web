@@ -54,6 +54,13 @@ function Dashboard() {
         fetchUserDetails();
     }, [dashData]);
 
+    const formatted = (createdAt) => {
+        const date = new Date(createdAt);
+        const formattedDate = date.toISOString().split('T')[0];
+        return formattedDate;
+    }
+    
+
     console.log(dashData)
 
   return (
@@ -102,8 +109,8 @@ function Dashboard() {
                         <tr key={key}>
                             <td>{userDetails[val.userID] ? userDetails[val.userID].fname : "Unknown"}</td>
                             <td>23</td>
-                            <td>{val.userID}</td>
-                            <td>{val.createdAt}</td>
+                            <td>{userDetails[val.userID] ? userDetails[val.userID].address : "Unknown"}</td>
+                            <td>{formatted(val.createdAt)}</td>
                             <td><div className="status">{val.status}</div></td>
                         </tr>
                 ))}
