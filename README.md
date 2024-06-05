@@ -13,7 +13,7 @@ The system collects data from disaster-affected areas, uploads it to a central d
 - **Database**: MongoDB
 - **API**: RESTful API for communication between frontend and backend.
 
-### 4. Data Flow
+### Data Flow
 
 1. **Data Collection**: Data is collected using mobile devices and sensors.
 2. **Data Transmission**: Collected data is transmitted to intermediate upload stations.
